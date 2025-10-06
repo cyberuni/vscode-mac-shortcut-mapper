@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.0.0...v1.1.0) (2025-10-06)
+
+
+### Features
+
+* add windsurf support ([5f7cdfe](https://github.com/cyberuni/vscode-mac-shortcut-mapper/commit/5f7cdfe2bcce0f84115b702835eb4e4a2122546d))
+
 # 1.0.0 (2025-07-14)
 
 
