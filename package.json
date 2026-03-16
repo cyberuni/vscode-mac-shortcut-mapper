@@ -33,12 +33,6 @@
 		"watch": "tsc -watch -p ./"
 	},
 	"contributes": {
-		"commands": [
-			{
-				"command": "macos-key-mapper.helloWorld",
-				"title": "Hello World"
-			}
-		],
 		"configuration": {
 			"title": "MacOS Key Mapper",
 			"type": "object",
