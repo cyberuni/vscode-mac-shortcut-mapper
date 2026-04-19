@@ -1,4 +1,4 @@
-export type SupportedAppKey = 'vscode' | 'vscode-insiders' | 'cursor' | 'windsurf'
+export type SupportedAppKey = 'vscode' | 'vscode-insiders' | 'cursor' | 'windsurf' | 'antigravity'
 
 export function getAppKey(appName: string): SupportedAppKey | undefined {
 	if (appName === 'Visual Studio Code') {
@@ -12,5 +12,8 @@ export function getAppKey(appName: string): SupportedAppKey | undefined {
 	}
 	if (appName.startsWith('Windsurf')) {
 		return 'windsurf'
+	}
+	if (appName.startsWith('Antigravity')) {
+		return 'antigravity'
 	}
 }
