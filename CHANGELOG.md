@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.1.0...v1.2.0) (2026-04-19)
+
+
+### Features
+
+* add Google Antigravity support ([2258fd0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/commit/2258fd098ecf55b6ae9a50478df209d64e51c7ec))
+
 # [1.1.0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.0.0...v1.1.0) (2025-10-06)
 
 
