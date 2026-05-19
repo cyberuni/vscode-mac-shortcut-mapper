@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.2.0...v1.2.1) (2026-05-19)
+
+
+### Bug Fixes
+
+* format skills-lock.json with tabs for biome ([de522e0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/commit/de522e0049305524793553ada3ceee8223153090))
+
 # [1.2.0](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.1.0...v1.2.0) (2026-04-19)
 
 
