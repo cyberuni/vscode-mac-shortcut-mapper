@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.2.1...v1.2.2) (2026-08-09)
+
+
+### Bug Fixes
+
+* install @vscode/vsce, not the deprecated vsce package ([3512c23](https://github.com/cyberuni/vscode-mac-shortcut-mapper/commit/3512c23a819446ad4b77f7cbf2075fdceb674ba8)), closes [#48](https://github.com/cyberuni/vscode-mac-shortcut-mapper/issues/48)
+* stop biome formatting the generated skills-lock.json ([d70d33d](https://github.com/cyberuni/vscode-mac-shortcut-mapper/commit/d70d33df821040cb640efb16507e40189ea883a1)), closes [#48](https://github.com/cyberuni/vscode-mac-shortcut-mapper/issues/48)
+
 ## [1.2.1](https://github.com/cyberuni/vscode-mac-shortcut-mapper/compare/v1.2.0...v1.2.1) (2026-05-19)
 
 
