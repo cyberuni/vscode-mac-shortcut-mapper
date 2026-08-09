@@ -5,6 +5,11 @@ on:
   release:
     types:
     - created
+  # Re-running a PREVIOUS release run does not work: it checks out that run's commit, and
+  # semantic-release refuses with "The local branch main is behind the remote one,
+  # therefore a new version won't be published." A fresh run on current main is required,
+  # so allow triggering one without inventing a dummy commit.
+  workflow_dispatch:
 jobs:
   code:
     uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v1
