@@ -1,0 +1,41 @@
+# One-off helper: prints the Azure DevOps profile ID of the publishing identity.
+#
+# A managed identity has NO Azure DevOps profile until it authenticates to Azure DevOps
+# at least once. The Marketplace runs on Azure DevOps and its publisher Members picker
+# only recognises ADO profile IDs — a client ID, a service principal object ID and a
+# managed identity resource ID are all rejected ("TF14045: The identity could not be
+# found" / "Not a valid User Id").
+#
+# The call below both CREATES the profile and returns its id. Paste that id into
+# https://marketplace.visualstudio.com/manage/publishers/unional -> Members, as
+# Contributor. Run this again for any new publishing identity.
+name: ado-profile
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          allow-no-subscriptions: true
+
+      - name: Create and print the Azure DevOps profile
+        run: |
+          # 499b84ac-1321-427f-aa17-267ca6975798 is Azure DevOps's well-known app ID.
+          az rest -u https://app.vssps.visualstudio.com/_apis/profile/profiles/me \
+            --resource 499b84ac-1321-427f-aa17-267ca6975798 > profile.json
+          cat profile.json
+          ID=$(python3 -c "import json;print(json.load(open('profile.json'))['id'])")
+          echo "### Azure DevOps profile ID" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "$ID" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "Paste this into the publisher's Members tab as Contributor." >> "$GITHUB_STEP_SUMMARY"
