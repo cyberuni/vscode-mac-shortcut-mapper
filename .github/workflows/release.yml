@@ -47,7 +47,10 @@ jobs:
         node-version: 24
         cache: pnpm
     - run: pnpm install
-    - run: pnpm add -g vsce ovsx
+    # `@vscode/vsce`, not `vsce`. The old package is deprecated ("vsce has been renamed
+    # to @vscode/vsce") and frozen at 2.15.0, which predates `--azure-credential` — so
+    # semantic-release-vsce fails with `unknown option '--azure-credential'`.
+    - run: pnpm add -g @vscode/vsce ovsx
     - name: Publish
       # if: success() && startsWith(github.ref, 'refs/tags/')
       run: pnpx semantic-release
