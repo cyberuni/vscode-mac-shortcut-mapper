@@ -19,6 +19,7 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to mint the OIDC token azure/login exchanges for a credential
     steps:
     - name: "Start X Virtual Frame Buffer"
       run: "echo \"DISPLAY=:99.0\" >> $GITHUB_ENV && Xvfb :99 -screen 0 1920x1080x24 > /dev/null 2>&1 &"
@@ -27,6 +28,18 @@ jobs:
       with:
         fetch-depth: 0
         token: ${{ secrets.CI_GITHUB_TOKEN }}
+    # Federated identity, no stored credential. The trust is the federated credential
+    # on the Entra app registration, bound to this repo and branch — the client and
+    # tenant IDs are identifiers, not secrets, which is why they are `vars`.
+    #
+    # `allow-no-subscriptions` because publishing to the Marketplace is not tied to an
+    # Azure subscription; a tenant-level login is all vsce needs.
+    - uses: azure/login@v2
+      with:
+        client-id: ${{ vars.AZURE_CLIENT_ID }}
+        tenant-id: ${{ vars.AZURE_TENANT_ID }}
+        allow-no-subscriptions: true
+
     - uses: pnpm/action-setup@v4
     - name: Install Node.js
       uses: actions/setup-node@v4
@@ -40,7 +53,9 @@ jobs:
       run: pnpx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        # Replaces VSCE_PAT. semantic-release-vsce errors if BOTH are set, so the
+        # VSCE_PAT line must stay deleted even though the org secret still exists.
+        VSCE_AZURE_CREDENTIAL: 'true'
         OVSX_PAT: ${{ secrets.OVSX_TOKEN }}
   # docgen:
   #     uses: unional/.github/.github/workflows/pnpm-docs.yml@main
