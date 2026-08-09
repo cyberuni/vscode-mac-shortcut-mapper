@@ -8,7 +8,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!**/default-keybindings*.jsonc"]
+		"includes": ["**", "!**/default-keybindings*.jsonc", "!skills-lock.json"]
 	},
 	"linter": {
 		"rules": {
