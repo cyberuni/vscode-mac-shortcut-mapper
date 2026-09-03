@@ -21,6 +21,8 @@ out/**/*.unit.js
 .github/**
 cursor-configs/**
 biome.jsonc
+.commitlintrc.json
+.husky/**
 .editorconfig
 .gitignore
 .markdownlint-cli2.jsonc
