@@ -1,0 +1,12 @@
+# Supply-chain soak. `minimumReleaseAge` alone makes pnpm silently EXCLUDE packages
+# younger than the window; `minimumReleaseAgeStrict` makes it fail instead, which is
+# the behaviour we want in CI.
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+
+# Postinstall allow-list. Replaces the `pnpm.onlyBuiltDependencies` /
+# `pnpm.ignoredBuiltDependencies` fields in package.json, which pnpm no longer reads.
+allowBuilds:
+  '@biomejs/biome': true
+  '@vscode/vsce-sign': true
+  keytar: false
