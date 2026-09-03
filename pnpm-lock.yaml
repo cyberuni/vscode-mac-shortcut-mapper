@@ -37,7 +37,7 @@ importers:
         version: 20.17.24
       '@types/vscode':
         specifier: ^1.80.0
-        version: 1.98.0
+        version: 1.136.0
       '@vscode/test-cli':
         specifier: ^0.0.10
         version: 0.0.10
@@ -622,8 +622,8 @@ packages:
   '@types/sarif@2.1.7':
     resolution: {integrity: sha512-kRz0VEkJqWLf1LLVN4pT1cg1Z9wAuvI6L97V3m2f5B76Tg8d413ddvLBPTEHAZJlnn4XSvu0FkZtViCQGVyrXQ==}
 
-  '@types/vscode@1.98.0':
-    resolution: {integrity: sha512-+KuiWhpbKBaG2egF+51KjbGWatTH5BbmWQjSLMDCssb4xF8FJnW4nGH4nuAdOOfMbpD0QlHtI+C3tPq+DoKElg==}
+  '@types/vscode@1.136.0':
+    resolution: {integrity: sha512-DO746VAfnHk8+Y8CsUKYMm2rjWD0mxEuYBZI+ssaqJY7yvLJPf9lcwxSSz9W60gbdvdcGyvHQxHTyByfF9mVqg==}
 
   '@typespec/ts-http-runtime@0.3.0':
     resolution: {integrity: sha512-sOx1PKSuFwnIl7z4RN0Ls7N9AQawmR9r66eI5rFCzLDIs8HTIYrIpH9QjYWoX0lkgGrkLxXhi4QnK7MizPRrIg==}
@@ -1002,15 +1002,6 @@ packages:
       '@types/node': '*'
       cosmiconfig: '>=9'
       typescript: '>=5'
-
-  cosmiconfig@9.0.0:
-    resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      typescript: '>=4.9.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   cosmiconfig@9.0.2:
     resolution: {integrity: sha512-gtTZxTDau1wL7Y7zifc2dd8jHSK/k6BTx/2Xp/BpdlAdnlYWFVt7qhJqgwi7637yRwRQ3qL4ZidbB4I8tA5VOg==}
@@ -3524,7 +3515,7 @@ snapshots:
 
   '@types/sarif@2.1.7': {}
 
-  '@types/vscode@1.98.0': {}
+  '@types/vscode@1.136.0': {}
 
   '@typespec/ts-http-runtime@0.3.0(supports-color@8.1.1)':
     dependencies:
@@ -3958,15 +3949,6 @@ snapshots:
       '@types/node': 20.17.24
       cosmiconfig: 9.0.2(typescript@5.8.2)
       jiti: 2.6.1
-      typescript: 5.8.2
-
-  cosmiconfig@9.0.0(typescript@5.8.2):
-    dependencies:
-      env-paths: 2.2.1
-      import-fresh: 3.3.1
-      js-yaml: 4.1.0
-      parse-json: 5.2.0
-    optionalDependencies:
       typescript: 5.8.2
 
   cosmiconfig@9.0.2(typescript@5.8.2):
@@ -4779,7 +4761,7 @@ snapshots:
   marked-terminal@7.3.0(marked@15.0.12):
     dependencies:
       ansi-escapes: 7.0.0
-      ansi-regex: 6.1.0
+      ansi-regex: 6.3.0
       chalk: 5.4.1
       cli-highlight: 2.1.11
       cli-table3: 0.6.5
@@ -5281,7 +5263,7 @@ snapshots:
       '@semantic-release/npm': 12.0.2(semantic-release@24.2.7(supports-color@8.1.1)(typescript@5.8.2))
       '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.7(supports-color@8.1.1)(typescript@5.8.2))(supports-color@8.1.1)
       aggregate-error: 5.0.0
-      cosmiconfig: 9.0.0(typescript@5.8.2)
+      cosmiconfig: 9.0.2(typescript@5.8.2)
       debug: 4.4.1(supports-color@8.1.1)
       env-ci: 11.1.1
       execa: 9.6.0
