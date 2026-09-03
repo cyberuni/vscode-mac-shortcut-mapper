@@ -24,11 +24,12 @@
 	"scripts": {
 		"check": "biome check",
 		"compile": "tsc -p ./",
-		"pretest": "pnpm run compile && pnpm run check",
-		"test": "vscode-test",
 		"package": "vsce package",
+		"pretest": "pnpm run compile && pnpm run check",
 		"publish": "vsce publish",
-		"verify": "pnpm run test",
+		"test": "vscode-test",
+		"typecheck": "tsc -p ./ --noEmit",
+		"verify": "pnpm run typecheck && pnpm run test",
 		"vscode:prepublish": "pnpm run compile",
 		"watch": "tsc -watch -p ./"
 	},
