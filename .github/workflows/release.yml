@@ -16,6 +16,9 @@ jobs:
     with:
       os: '["ubuntu-latest"]'
       node-version: '[24]'
+      # No browser tests here, and codecov is not wired up for this extension.
+      skip-playwright: true
+      skip-codecov: true
 
   release:
     runs-on: ubuntu-latest
