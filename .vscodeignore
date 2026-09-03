@@ -1,12 +1,37 @@
-.vscode/**
-.vscode-test/**
+# Everything the extension host does not load at runtime. The VSIX should be
+# package.json + README/LICENSE/CHANGELOG + out/*.js + default_ahk/*.ahk.
+
+# Sources and build metadata
 src/**
-.gitignore
-.yarnrc
-vsc-extension-quickstart.md
+**/*.ts
+**/*.map
+**/*.js.map
 **/tsconfig.json
 **/eslint.config.mjs
-**/*.map
-**/*.ts
+
+# Tests (compiled specs must not ship)
+out/test/**
+out/**/*.unit.js
+.vscode-test/**
 **/.vscode-test.*
-**/*.js.map
+.vscode/**
+
+# Repo tooling and docs that are not extension content
+.agents/**
+.github/**
+cursor-configs/**
+biome.jsonc
+.editorconfig
+.gitignore
+.markdownlint-cli2.jsonc
+.npmrc
+.releaserc.json
+.yarnrc
+pnpm-lock.yaml
+pnpm-workspace.yaml
+skills-lock.json
+vsc-extension-quickstart.md
+
+# Reference keybinding dumps: used when authoring the .ahk scripts, not at runtime.
+default-keybindings-mac.jsonc
+default-keybindings-win.jsonc
