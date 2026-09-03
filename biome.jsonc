@@ -12,6 +12,11 @@
 	},
 	"linter": {
 		"rules": {
+			"style": {
+				// Ships at `info` in biome's recommended set, which exits 0 — a bare
+				// `import ... from 'path'` would pass. Pinned so the check actually fails.
+				"useNodejsImportProtocol": "error"
+			},
 			"suspicious": {
 				"noConsole": { "level": "warn", "options": { "allow": ["log"] } }
 			}
