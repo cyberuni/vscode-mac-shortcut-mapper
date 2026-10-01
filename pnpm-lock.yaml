@@ -19,7 +19,7 @@ importers:
         version: 21.2.2
       '@repobuddy/biome':
         specifier: ^2.0.1
-        version: 2.0.1(@biomejs/biome@2.1.1)
+        version: 2.5.0(@biomejs/biome@2.1.1)
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@24.2.7(supports-color@8.1.1)(typescript@5.8.2))
@@ -472,10 +472,10 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@repobuddy/biome@2.0.1':
-    resolution: {integrity: sha512-9IfrOWqSVxNGELrq+LxYK1sBA3/ZQzbP1csruaGyaYmA5MPABj25/TiIvU8BnbdmDJQ+DTgWYoelIXSATXZpyg==}
+  '@repobuddy/biome@2.5.0':
+    resolution: {integrity: sha512-/BGDUyepN6raSPBt+LEoLsWuCLFt5mhxNoogGnIF8voeIft/Oj/NlygGMNl8B0SF2QKw95TxH/WWcJmarW7Xnw==}
     peerDependencies:
-      '@biomejs/biome': '>= 1.8.0'
+      '@biomejs/biome': '>= 2'
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
@@ -1002,15 +1002,6 @@ packages:
       '@types/node': '*'
       cosmiconfig: '>=9'
       typescript: '>=5'
-
-  cosmiconfig@9.0.0:
-    resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      typescript: '>=4.9.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   cosmiconfig@9.0.2:
     resolution: {integrity: sha512-gtTZxTDau1wL7Y7zifc2dd8jHSK/k6BTx/2Xp/BpdlAdnlYWFVt7qhJqgwi7637yRwRQ3qL4ZidbB4I8tA5VOg==}
@@ -3291,7 +3282,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@repobuddy/biome@2.0.1(@biomejs/biome@2.1.1)':
+  '@repobuddy/biome@2.5.0(@biomejs/biome@2.1.1)':
     dependencies:
       '@biomejs/biome': 2.1.1
 
@@ -3958,15 +3949,6 @@ snapshots:
       '@types/node': 20.17.24
       cosmiconfig: 9.0.2(typescript@5.8.2)
       jiti: 2.6.1
-      typescript: 5.8.2
-
-  cosmiconfig@9.0.0(typescript@5.8.2):
-    dependencies:
-      env-paths: 2.2.1
-      import-fresh: 3.3.1
-      js-yaml: 4.1.0
-      parse-json: 5.2.0
-    optionalDependencies:
       typescript: 5.8.2
 
   cosmiconfig@9.0.2(typescript@5.8.2):
@@ -4779,7 +4761,7 @@ snapshots:
   marked-terminal@7.3.0(marked@15.0.12):
     dependencies:
       ansi-escapes: 7.0.0
-      ansi-regex: 6.1.0
+      ansi-regex: 6.3.0
       chalk: 5.4.1
       cli-highlight: 2.1.11
       cli-table3: 0.6.5
@@ -5281,7 +5263,7 @@ snapshots:
       '@semantic-release/npm': 12.0.2(semantic-release@24.2.7(supports-color@8.1.1)(typescript@5.8.2))
       '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.7(supports-color@8.1.1)(typescript@5.8.2))(supports-color@8.1.1)
       aggregate-error: 5.0.0
-      cosmiconfig: 9.0.0(typescript@5.8.2)
+      cosmiconfig: 9.0.2(typescript@5.8.2)
       debug: 4.4.1(supports-color@8.1.1)
       env-ci: 11.1.1
       execa: 9.6.0
