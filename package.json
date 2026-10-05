@@ -62,7 +62,7 @@
 		"@types/node": "20.x",
 		"@types/vscode": "^1.80.0",
 		"@vscode/test-cli": "^0.0.15",
-		"@vscode/test-electron": "^2.5.2",
+		"@vscode/test-electron": "^3.0.0",
 		"husky": "^9.1.7",
 		"semantic-release-vsce": "^6.0.10",
 		"typescript": "^5.7.3"
