@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 jobs:
   code:
-    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v1
+    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v2
     with:
       os: '["ubuntu-latest"]'
       node-version: '[24]'
