@@ -48,7 +48,7 @@ jobs:
         tenant-id: ${{ vars.AZURE_TENANT_ID }}
         allow-no-subscriptions: true
 
-    - uses: pnpm/action-setup@v4
+    - uses: pnpm/action-setup@v6
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
