@@ -32,7 +32,7 @@ jobs:
     - name: "Start X Virtual Frame Buffer"
       run: "echo \"DISPLAY=:99.0\" >> $GITHUB_ENV && Xvfb :99 -screen 0 1920x1080x24 > /dev/null 2>&1 &"
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
         token: ${{ secrets.CI_GITHUB_TOKEN }}
