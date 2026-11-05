@@ -52,7 +52,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 24
+        node-version: 26
         cache: pnpm
     - run: pnpm install
     # `@vscode/vsce`, not `vsce`. The old package is deprecated ("vsce has been renamed
