@@ -16,8 +16,9 @@ jobs:
     with:
       os: '["ubuntu-latest"]'
       node-version: '[24]'
-      # No browser tests here, and codecov is not wired up for this extension.
-      skip-playwright: true
+      # Codecov is not wired up for this extension. Leave Playwright on: the extension
+      # tests launch VS Code, which needs the Linux virtual display that v2 starts only
+      # when skip-playwright is false. There is no Playwright here, so no browsers install.
       skip-codecov: true
 
   release:
